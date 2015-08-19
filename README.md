@@ -17,7 +17,7 @@ git clone git@github.com:CultivateHQ/conman.git
 cd conman
 
 # get dependencies
-mix deps.get
+npm install && mix deps.get
 
 # build and populate the database
 mix ecto.create && mix ecto.migrate && mix run priv/repo/seeds.exs

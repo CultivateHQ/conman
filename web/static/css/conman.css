@@ -1,0 +1,57 @@
+body {
+  background: papayawhip;
+  font-family: Helvetica Neue, sans-serif;
+}
+
+.container {
+  width: 740px;
+  margin: auto;
+}
+
+h1 {
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Oswald', sans-serif;
+}
+
+/* --- Contact List --- */
+
+.contact-list {
+  margin-top: 20px;
+  padding-left: 0;
+}
+
+.contact-list__contact {
+  background-color: ivory;
+  list-style: none;
+  padding: 20px;
+  margin-bottom: 20px;
+  padding-top: .1px;
+}
+
+.contact-list__contact__email, .contact-list__contact__phone {
+  width: 50%;
+  display: inline-block;
+}
+
+.contact-list__contact__phone {
+  text-align: right;
+}
+
+.contact-list__contact__email span, .contact-list__contact__phone span {
+  font-weight: bold;
+  margin-right: 0.4em;
+}
+
+a, a:visited {
+  color: darkslategray;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  padding-bottom: 0.2em;
+  border-bottom: 2px solid darkslategray;
+}

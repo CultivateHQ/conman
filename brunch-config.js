@@ -2,7 +2,9 @@ exports.config = {
   // See http://brunch.io/#documentation for docs.
   files: {
     javascripts: {
-      joinTo: 'js/app.js'
+      joinTo: {
+        'js/app.js': /^(web\/static)/
+      }
 
       // To use a separate vendor.js bundle, specify two files path
       // https://github.com/brunch/brunch/blob/stable/docs/config.md#files
@@ -40,7 +42,8 @@ exports.config = {
     // Dependencies and current project directories to watch
     watched: ["deps/phoenix/web/static",
               "deps/phoenix_html/web/static",
-              "web/static", "test/static"],
+              "web/static", "test/static",
+              "web/elm/Main.elm"],
 
     // Where to compile files to
     public: "priv/static"
@@ -48,6 +51,12 @@ exports.config = {
 
   // Configure your plugins
   plugins: {
+    elmBrunch: {
+      elmFolder: 'web/elm',
+      mainModules: ['Main.elm'],
+      outputFolder: '../static/vendor'
+    },
+
     babel: {
       // Do not use ES6 compiler in vendor code
       ignore: [/web\/static\/vendor/]

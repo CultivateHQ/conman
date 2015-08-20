@@ -4563,21 +4563,21 @@ Elm.Main.make = function (_elm) {
                    action._0))
                    ,_1: $Effects.none};}
          _U.badCase($moduleName,
-         "between lines 67 and 71");
+         "between lines 93 and 104");
       }();
    });
-   var newContact = F3(function (name,
-   email,
-   phone) {
+   var Contact = F3(function (a,
+   b,
+   c) {
       return {_: {}
-             ,email: email
-             ,name: name
-             ,phone: phone};
+             ,email: b
+             ,name: a
+             ,phone: c};
    });
    var decodeContacts = function () {
       var contact = A4($Json$Decode.object3,
       F3(function (name,email,phone) {
-         return A3(newContact,
+         return A3(Contact,
          name,
          email,
          phone);
@@ -4601,14 +4601,6 @@ Elm.Main.make = function (_elm) {
    var init = {ctor: "_Tuple2"
               ,_0: Model(_L.fromArray([]))
               ,_1: fetchContacts};
-   var Contact = F3(function (a,
-   b,
-   c) {
-      return {_: {}
-             ,email: b
-             ,name: a
-             ,phone: c};
-   });
    var app = $StartApp.start({_: {}
                              ,init: init
                              ,inputs: _L.fromArray([])
@@ -4621,7 +4613,6 @@ Elm.Main.make = function (_elm) {
                       ,app: app
                       ,main: main
                       ,Contact: Contact
-                      ,newContact: newContact
                       ,Model: Model
                       ,init: init
                       ,RefreshContacts: RefreshContacts
